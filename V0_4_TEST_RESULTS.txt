@@ -1,0 +1,14 @@
+SKILLFORGE V0.4 test verification
+Date: 2026-11-18
+Command: python -m unittest discover -s tests -v
+Result: 45 tests passed, 0 failed.
+
+Coverage includes:
+- V0.1 compiler, runtime, composition, validation, and transfer tests
+- V0.2 constrained patching, immutable versions, integrity, rollback, and historical regression tests
+- V0.3 multi-type diagnosis, multi-candidate repair, and autonomous publication tests
+- V0.4 EvidenceStore provenance/deduplication, task-level split, model training, censored survival predictions,
+  Bayesian root-cause posterior update, outcome-hidden ranking, deterministic benchmark reproduction,
+  and runtime repair fallback/publication tests
+
+The ZIP archive was integrity-checked, extracted into a fresh directory, and the same 45-test suite passed again.
