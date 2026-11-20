@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skillforge.local/schemas/pipeline-0.1.schema.json",
+  "title": "SKILLFORGE Pipeline IR 0.1",
+  "type": "object",
+  "required": ["schema_version", "id", "inputs", "outputs", "nodes", "output_map"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "id": {"type": "string", "minLength": 1},
+    "name": {"type": "string"},
+    "inputs": {"$ref": "#/$defs/typeMap"},
+    "outputs": {"$ref": "#/$defs/typeMap"},
+    "nodes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/node"}},
+    "output_map": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ref"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "typeName": {"enum": ["string", "integer", "number", "boolean", "object", "array", "any"]},
+    "typeMap": {"type": "object", "additionalProperties": {"$ref": "#/$defs/typeName"}},
+    "ref": {"type": "object", "required": ["$ref"], "properties": {"$ref": {"type": "string", "pattern": "^(input\\.[A-Za-z_][A-Za-z0-9_-]*|node\\.[A-Za-z_][A-Za-z0-9_-]*\\.[A-Za-z_][A-Za-z0-9_-]*)$"}}, "additionalProperties": false},
+    "node": {"type": "object", "required": ["id", "skill", "bindings"], "properties": {"id": {"type": "string"}, "skill": {"type": "string"}, "bindings": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ref"}}}, "additionalProperties": false}
+  }
+}

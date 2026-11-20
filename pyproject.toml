@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillforge"
+version = "0.7.0"
+description = "Agent skill evolution engine with evidence-guided repair and external benchmark adapters"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.scripts]
+skillforge = "skillforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["skillforge*"]
