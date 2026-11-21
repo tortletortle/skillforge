@@ -31,3 +31,10 @@ git push origin --tags
 ```
 
 不要用空骨架覆盖已有历史。
+
+
+## V0.7 verification archive (source migration pending)
+
+- `V0_7_REPORT.md` — open-world repair research report.
+- `V0_7_TEST_RESULTS.txt` — 94-test regression log from the recovered V0.7 package.
+- The complete V0.7 source archive has not yet been migrated into this repository. The archived test result does not establish that the repository checkout itself can currently run those tests.
