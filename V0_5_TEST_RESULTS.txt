@@ -1,0 +1,87 @@
+SKILLFORGE V0.5 local verification
+=================================
+unittest total: 57
+unittest passed: 57
+unittest failed: 0
+compileall return code: 0
+benchmark CLI help return code: 0
+matrix CLI return code: 0
+matrix dry-run return code: 0
+matrix planned runs: 11
+matrix dry-run rows: 11
+collect CLI return code: 0
+SkillFlow family-sequence split CLI return code: 0
+official external benchmark runs: NOT EXECUTED (upstream repos/datasets/runtime/API credentials unavailable)
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+test_execute_plan_is_dry_run_by_default (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_execute_plan_is_dry_run_by_default) ... ok
+test_exporters_create_expected_skill_paths (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_exporters_create_expected_skill_paths) ... ok
+test_grouped_split_has_no_group_overlap (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_grouped_split_has_no_group_overlap) ... ok
+test_result_ingestion_and_paired_delta (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_result_ingestion_and_paired_delta) ... ok
+test_skillflow_discovers_family_tasks_and_builds_native_plan (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_skillflow_discovers_family_tasks_and_builds_native_plan) ... ok
+test_skillflow_forward_split_respects_family_ranking (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_skillflow_forward_split_respects_family_ranking) ... ok
+test_skilllearnbench_discovers_tasks_and_includes_available_baselines (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_skilllearnbench_discovers_tasks_and_includes_available_baselines) ... ok
+test_skillsbench_oracle_gate_and_paired_conditions (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_skillsbench_oracle_gate_and_paired_conditions) ... ok
+test_swe_overlay_stages_generated_skill_without_mutating_source (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_swe_overlay_stages_generated_skill_without_mutating_source) ... ok
+test_swe_skills_bench_discovers_skill_ids_and_pairs_modes (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_swe_skills_bench_discovers_skill_ids_and_pairs_modes) ... ok
+test_unknown_or_wrong_repo_is_rejected (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_unknown_or_wrong_repo_is_rejected) ... ok
+test_verifier_leakage_guard_rejects_test_material (test_external_benchmarks.ExternalBenchmarkAdapterTests.test_verifier_leakage_guard_rejects_test_material) ... ok
+test_compile_and_run (test_skillforge.SkillForgeTests.test_compile_and_run) ... ok
+test_composition (test_skillforge.SkillForgeTests.test_composition) ... ok
+test_composition_allows_forward_node_declaration (test_skillforge.SkillForgeTests.test_composition_allows_forward_node_declaration) ... ok
+test_composition_rejects_cycle (test_skillforge.SkillForgeTests.test_composition_rejects_cycle) ... ok
+test_composition_rejects_unproven_contract (test_skillforge.SkillForgeTests.test_composition_rejects_unproven_contract) ... ok
+test_composition_type_mismatch (test_skillforge.SkillForgeTests.test_composition_type_mismatch) ... ok
+test_reject_missing_reference (test_skillforge.SkillForgeTests.test_reject_missing_reference) ... ok
+test_reject_step_dependency_cycle (test_skillforge.SkillForgeTests.test_reject_step_dependency_cycle) ... ok
+test_reject_unknown_operation (test_skillforge.SkillForgeTests.test_reject_unknown_operation) ... ok
+test_reject_wrong_input_type (test_skillforge.SkillForgeTests.test_reject_wrong_input_type) ... ok
+test_transfer (test_skillforge.SkillForgeTests.test_transfer) ... ok
+test_validator (test_skillforge.SkillForgeTests.test_validator) ... ok
+test_failed_candidate_is_not_published (test_v02.SkillForgeV02Tests.test_failed_candidate_is_not_published) ... ok
+test_historical_regression_reports_behavior_change (test_v02.SkillForgeV02Tests.test_historical_regression_reports_behavior_change) ... ok
+test_immutable_version_integrity_check (test_v02.SkillForgeV02Tests.test_immutable_version_integrity_check) ... ok
+test_patch_rejects_arbitrary_code_operation (test_v02.SkillForgeV02Tests.test_patch_rejects_arbitrary_code_operation) ... ok
+test_repair_not_generated_when_no_matching_failure (test_v02.SkillForgeV02Tests.test_repair_not_generated_when_no_matching_failure) ... ok
+test_repair_patch_replaces_literal_space_operation_and_adds_regression_case (test_v02.SkillForgeV02Tests.test_repair_patch_replaces_literal_space_operation_and_adds_regression_case) ... ok
+test_stale_patch_rejected (test_v02.SkillForgeV02Tests.test_stale_patch_rejected) ... ok
+test_store_publish_and_rollback (test_v02.SkillForgeV02Tests.test_store_publish_and_rollback) ... ok
+test_validator_exposes_structured_failure_evidence (test_v02.SkillForgeV02Tests.test_validator_exposes_structured_failure_evidence) ... ok
+test_autonomous_repair_publishes_compound_patch (test_v03.SkillForgeV03Tests.test_autonomous_repair_publishes_compound_patch) ... ok
+test_autonomous_repair_refuses_unlocalized_runtime_error (test_v03.SkillForgeV03Tests.test_autonomous_repair_refuses_unlocalized_runtime_error) ... ok
+test_candidate_ranker_rejects_narrow_patch_on_unseen_whitespace (test_v03.SkillForgeV03Tests.test_candidate_ranker_rejects_narrow_patch_on_unseen_whitespace) ... ok
+test_candidate_with_invalid_operation_is_rejected (test_v03.SkillForgeV03Tests.test_candidate_with_invalid_operation_is_rejected) ... ok
+test_compound_candidate_repairs_two_independent_faults (test_v03.SkillForgeV03Tests.test_compound_candidate_repairs_two_independent_faults) ... ok
+test_diagnoses_case_normalization (test_v03.SkillForgeV03Tests.test_diagnoses_case_normalization) ... ok
+test_diagnoses_compile_dependency_error (test_v03.SkillForgeV03Tests.test_diagnoses_compile_dependency_error) ... ok
+test_diagnoses_input_schema_mismatch_without_coercion (test_v03.SkillForgeV03Tests.test_diagnoses_input_schema_mismatch_without_coercion) ... ok
+test_diagnoses_missing_trim (test_v03.SkillForgeV03Tests.test_diagnoses_missing_trim) ... ok
+test_diagnoses_numeric_parser_too_narrow (test_v03.SkillForgeV03Tests.test_diagnoses_numeric_parser_too_narrow) ... ok
+test_diagnoses_whitespace_root_cause (test_v03.SkillForgeV03Tests.test_diagnoses_whitespace_root_cause) ... ok
+test_diagnoses_wrong_literal_replacement (test_v03.SkillForgeV03Tests.test_diagnoses_wrong_literal_replacement) ... ok
+test_efficiency_regression_is_reported_but_not_auto_repaired_without_evidence (test_v03.SkillForgeV03Tests.test_efficiency_regression_is_reported_but_not_auto_repaired_without_evidence) ... ok
+test_generates_multiple_whitespace_candidates (test_v03.SkillForgeV03Tests.test_generates_multiple_whitespace_candidates) ... ok
+test_observed_skill_body_mutation_is_rejected (test_v03.SkillForgeV03Tests.test_observed_skill_body_mutation_is_rejected) ... ok
+test_parse_number_is_finite_and_handles_decimal (test_v03.SkillForgeV03Tests.test_parse_number_is_finite_and_handles_decimal) ... ok
+test_set_step_arg_patch_is_constrained_and_validated (test_v03.SkillForgeV03Tests.test_set_step_arg_patch_is_constrained_and_validated) ... ok
+test_evidence_store_append_deduplicates_and_filters_sources (test_v04.SkillForgeV04Tests.test_evidence_store_append_deduplicates_and_filters_sources) ... ok
+test_failed_retest_reduces_belief_in_targeted_cause (test_v04.SkillForgeV04Tests.test_failed_retest_reduces_belief_in_targeted_cause) ... ok
+test_models_train_and_predict_probabilities (test_v04.SkillForgeV04Tests.test_models_train_and_predict_probabilities) ... ok
+test_runtime_repair_uses_cold_start_fallback_and_publishes_only_safe_patch (test_v04.SkillForgeV04Tests.test_runtime_repair_uses_cold_start_fallback_and_publishes_only_safe_patch) ... ok
+test_search_policy_cannot_read_outcomes_before_selection (test_v04.SkillForgeV04Tests.test_search_policy_cannot_read_outcomes_before_selection) ... ok
+test_task_level_split_has_no_task_overlap (test_v04.SkillForgeV04Tests.test_task_level_split_has_no_task_overlap) ... ok
+test_v04_benchmark_reproducible_on_small_split (test_v04.SkillForgeV04Tests.test_v04_benchmark_reproducible_on_small_split) ... ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 3.939s
+
+OK
